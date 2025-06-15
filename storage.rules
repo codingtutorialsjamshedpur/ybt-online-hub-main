@@ -1,0 +1,29 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Public read access, but only authenticated users can write
+      allow read;
+      allow write: if request.auth != null;
+      
+      // Product images
+      match /products/{productId}/{fileName} {
+        allow read;
+        allow write: if request.auth != null && request.auth.token.admin == true;
+      }
+      
+      // Blog images
+      match /blogs/{blogId}/{fileName} {
+        allow read;
+        allow write: if request.auth != null && request.auth.token.admin == true;
+      }
+      
+      // User avatars
+      match /users/{userId}/{fileName} {
+        allow read;
+        allow write: if request.auth != null && 
+          (request.auth.uid == userId || request.auth.token.admin == true);
+      }
+    }
+  }
+}

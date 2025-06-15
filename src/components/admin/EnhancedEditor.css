@@ -1,0 +1,193 @@
+/* Enhanced Editor Styles */
+
+/* Editor container styling */
+.enhanced-editor-container {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quill editor main styles */
+.enhanced-quill {
+  border-radius: 8px;
+  height: 400px;
+  background-color: white;
+}
+
+/* Toolbar styles */
+.enhanced-toolbar {
+  border-radius: 8px 8px 0 0;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Image toolbar section */
+.ql-image-section {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  position: relative;
+}
+
+.ql-image-section::before {
+  content: '';
+  height: 24px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 8px;
+}
+
+/* Custom button for image upload */
+.image-upload-btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #eaf4fe;
+  color: #0078d4;
+  border: 1px solid #0078d4;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.image-upload-btn:hover {
+  background-color: #0078d4;
+  color: white;
+}
+
+.image-upload-btn i {
+  margin-right: 4px;
+}
+
+/* Image resizing handles */
+.quill-resize-handle {
+  width: 8px;
+  height: 8px;
+  background-color: #0078d4;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Image caption styles */
+.image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* URL link input styles */
+.ql-link-tooltip {
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.ql-link-tooltip input {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+  margin-right: 4px;
+}
+
+.ql-link-tooltip button {
+  padding: 6px 10px;
+  background: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Image alignment options */
+.ql-align-options {
+  display: flex;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.ql-align-option {
+  padding: 4px 8px;
+  margin: 0 4px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ql-align-option.active {
+  background: #0078d4;
+  color: white;
+  border-color: #0078d4;
+}
+
+/* Placeholder text */
+.ql-editor.ql-blank::before {
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Table styles */
+.quill-better-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.quill-better-table td,
+.quill-better-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.quill-better-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+/* Image upload progress */
+.image-upload-progress {
+  height: 4px;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.image-upload-progress-bar {
+  height: 100%;
+  background-color: #0078d4;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Inline URL display */
+.ql-editor a {
+  color: #0078d4;
+  text-decoration: none;
+  border-bottom: 1px dotted #0078d4;
+}
+
+.ql-editor a:hover {
+  text-decoration: underline;
+}
+
+/* Error styling */
+.quill-error .ql-toolbar {
+  border-color: #e53e3e;
+}
+
+.quill-error .ql-container {
+  border-color: #e53e3e;
+}
